@@ -10,15 +10,15 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
-import com.mobile.farmacias.data.DataSource
+import com.mobile.farmacias.data.BaseDeDados
 import com.mobile.farmacias.databinding.ActivityMapsBinding
-import com.mobile.farmacias.model.DrugStore
+import com.mobile.farmacias.model.Farmacias
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
-    private lateinit var drugStores: List<DrugStore>
+    private lateinit var farmacias: List<Farmacias>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        drugStores = DataSource.loadDrugStores(applicationContext)
+        farmacias = BaseDeDados.carregarFarmacias(applicationContext)
 
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
@@ -36,7 +36,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        drugStores.forEach {
+        farmacias.forEach {
             mMap.addMarker(MarkerOptions()
                 .position(it.position)
                 .title(it.name))
