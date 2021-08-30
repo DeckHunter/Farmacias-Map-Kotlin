@@ -6,7 +6,7 @@ import com.mobile.farmacias.R
 import com.mobile.farmacias.model.DrugStore
 import java.util.*
 
-class DataSource {
+class BaseDeDados {
     companion object {
         fun loadDrugStores(context: Context): List<DrugStore> {
             val drugStores = mutableListOf<DrugStore>()
