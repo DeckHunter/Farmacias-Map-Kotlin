@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Farmácias</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="pague_menos">Pague Menos</string>
+    <string-array name="pague_menos">
+        <item>-3.7483898728157237,-38.52677606891952</item>
+        <item>-3.7297187930532667,-38.531582778542415</item>
+        <item>-3.756782652366907,-38.58599953523903</item>
+    </string-array>
+    <string-array name="extra_frama">
+        <item>-3.7339983553146716,-38.529179559160745</item>
+        <item>-3.7367361468742786,-38.487292297420545</item>
+        <item>-3.774593158459976,-38.48025065096552</item>
+    </string-array>
+    <string-array name="drogasil">
+        <item>-3.7403338837171813,-38.50840817387007</item>
+        <item>-3.739649808478637,-38.565399527450595</item>
+        <item>-3.7853851889758308,-38.54686030385752</item>
+    </string-array>
+</resources>
